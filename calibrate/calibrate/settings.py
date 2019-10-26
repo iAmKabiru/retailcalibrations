@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -135,5 +136,6 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
